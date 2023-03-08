@@ -18,7 +18,14 @@ const controller = {
 		})
 	},
 	search: (req, res) => {
-		// Do the magic
+		let keyword = (req.query.keywords);
+
+		productsFilter = products.filter(x => x.name.toLowerCase().includes(keyword))
+
+		res.render("results",{
+			productsFilter,
+			toThousand
+		})
 	},
 };
 

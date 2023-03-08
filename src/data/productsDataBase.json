@@ -151,5 +151,14 @@
       "category": "",
       "description": "motorola g42 ultima generacion!",
       "image": "1676586203303_products_.png"
+   },
+   {
+      "id": 18,
+      "name": "MOTO G42",
+      "price": "76000",
+      "discount": "20",
+      "category": "",
+      "description": "nuevo celular",
+      "image": "1676753307657_products_.jfif"
    }
 ]
