@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('partials/head', {title: 'Inicio'}) %>
+</head>
+<body>
+    <%- include('partials/headerNavbar') %>
+    <main class="register_main">
+        <form action="/users" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" value="<%= locals.old && old.name%>">
+            <% if (locals.errors && errors.name) { %>
+             <p class="mensaje_error"> <%= errors.name.msg %></p>
+            <% } %>
+            <label for="surname" >apellido:</label>
+            <input type="text" name="surname" value="<%= locals.old && old.surname%>">
+            <% if (locals.errors && errors.surname) { %>
+                <p class="mensaje_error"> <%= errors.surname.msg %></p>
+               <% } %>
+            <label for="email" >email:</label>
+            <input type="email" name="email" value="<%= locals.old && old.email%>">
+            <% if (locals.errors && errors.email) { %>
+                <p class="mensaje_error"> <%= errors.email.msg %></p>
+            <% } %>
+            <label for="email" >password:</label>
+            <input type="password" name="pass">
+            <% if (locals.errors && errors.pass) { %>
+                <p class="mensaje_error"> <%= errors.pass.msg %></p>
+            <% } %>
+            <button type="submit">enviar</button>
+        </form>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
+

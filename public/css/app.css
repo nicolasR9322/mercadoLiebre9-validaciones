@@ -415,7 +415,24 @@ textarea.form-input {
   padding: 15px;
 }
 
+.register_main{
+  width: 90%;
 
+}
+
+.register_main form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.mensaje_error {
+  color: red;
+  font-size: 0.8rem;
+}
 
 /*====== Media-Queries ======*/
 @media (min-width: 768px) {

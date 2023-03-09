@@ -1,6 +1,6 @@
-Trabajo practico integrador de Digital House : "Mercado Liebre"
+Trabajo practico de Digital House : "Express Validator"
 
-El objetivo del proyecto es construir un e-commerce en Node Js usando la metodologia mobile first, este repositorio corresponde a la octava iteracion del proyecto
+El objetivo del proyecto es aplicar validaciones en el back-end
 
 Metodo de uso:
     
@@ -10,10 +10,29 @@ Metodo de uso:
 
     -Luego ejecutar nodemon o ir a la ruta "src/bin" y ejecutar en la terminal : node www
 
-descripción: parte 2 del CRUD, agregando subida de imagenes con multer
+descripción: en este ejercicio realizaremos la validacion del registro de un usuario
 
-        desafio 1: se codifica el formulario de carga para ingresar productos y luego redirigirlos a la ruta /products incluyendo la posiblidad de subir una imagen
+    desafio 1: 
+    instalacion
+        -ejecutar npm i express-validator
 
-        desafio 2: se codifica la opcion de editar
+    desafio 2: 
+    implementando el middleware en las rutas
+        -requerir express validator
+        -construir un array con las validaciones
+        -utilizar la funcion check para cada campo
+        -agregar validaciones adicionales como maximos de caracteres
+        -agregar metodo bail para las validaciones principales
+        -implementar el middleware en la ruta
+    
+    desafio 3: 
+    implementacion en los controladores
+        -requerir validation result de express validator
+        -implementarlo pasandolo en dentro de una variable
+        -usar el metodo isEmpty() para determinar si hay errores
+        -enviar los errores a la vista a traves de mapped()
 
-        desafio 3: se codifica la opcion de eliminar
+    desafio 4: 
+    implementacion en las vistas
+        -validar si existe un error e implementar una respuesta si existe
+        -evitar que se reseteen los campos usando el objeto old en caso de error
